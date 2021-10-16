@@ -3,3 +3,9 @@
   <li>{{ tasks[1].title }} <span>{{ tasks[1].done }}</span></li>
   <li>{{ tasks[2].title }} <span>{{ tasks[2].done }}</span></li>
 </ul>
+<ul>
+  <li *ngFor="let task of tasks">
+    <span *ngIf="task.done">[完了]</span>
+    {{ task.title }}
+  </li>
+</ul>
