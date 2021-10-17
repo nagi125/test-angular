@@ -14,4 +14,9 @@ export class AppComponent {
   ];
 
   newTaskTitle = 'test';
+
+  addTask() {
+    this.tasks.push({title: this.newTaskTitle, done: false});
+    this.newTaskTitle = '';
+  }
 }
