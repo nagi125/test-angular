@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  title = "test-app";
+
   tasks = [
     {title: '牛乳を買う', done: false},
     {title: '可燃ゴミを出す', done: true},
