@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -20,20 +19,9 @@ export class AppComponent {
 
   result = {};
 
-  constructor(private http: HttpClient) { }
 
   addTask(): void {
-    // this.tasks.push({title: this.newTaskTitle, done: false});
-    // this.newTaskTitle = '';
-
-    this.http.get('https://api.github.com/users/nagi125', {
-      responseType: 'json'
-    }).subscribe(
-        data => {
-          this.result = data
-          console.log(this.result);
-        });
-
-
+    this.tasks.push({title: this.newTaskTitle, done: false});
+    this.newTaskTitle = '';
   }
 }
